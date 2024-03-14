@@ -115,6 +115,7 @@
   shell: gpg --recv --keyserver keyserver.ubuntu.com '{{item}}'
   loop:
     # - F4B432D5D67990E3 # wob
+    - 1A09227B1F435A33 # otb-unifont
 
   changed_when: false
 
@@ -138,7 +139,6 @@
       - remmina-plugin-rdesktop
       - wacom-settings-git
       - wacom-utility
-      # - connman-gtk # connman gtk gui
       - adb-sync-git # android dir sync
       - downgrade # package downgrader
       - lf # cli file manager
