@@ -3,7 +3,6 @@
   pacman:
     name:
       - xorg
-      - xorg-init
       - xterm 
       - i3-wm
       - i3blocks
