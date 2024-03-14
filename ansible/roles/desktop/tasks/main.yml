@@ -132,7 +132,7 @@
       - tabby-bin-debug
       - zenmap
       - camunda-modeler-bin
-      - drawio-desktop-bin
+      # - drawio-desktop-bin
       - pycharm-professional
       - realvnc-vnc-viewer
       - remmina-plugin-folder
