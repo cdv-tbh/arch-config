@@ -17,8 +17,8 @@
     groups: libvirt
     append: yes
 
-- name: enable nested virtualization
-  copy:
-    dest: /etc/modprobe.d/kvm.conf
-    content: | 
-      options kvm_intel nested=1
+# - name: enable nested virtualization
+#   copy:
+#     dest: /etc/modprobe.d/kvm.conf
+#     content: | 
+#       options kvm_intel nested=1
