@@ -11,3 +11,4 @@
     name: yay
     use: makepkg
     skip_installed: true
+    

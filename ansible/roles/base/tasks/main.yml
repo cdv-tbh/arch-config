@@ -9,7 +9,7 @@
       - glow # render markdown cli
       - zrepl # zfs snapshot manager
 
-- name: install base packages
+- name: install base packages 1
   pacman:
     name:
       # Main
@@ -24,6 +24,10 @@
       - ttf-font-awesome
       - ttf-ibm-plex
       - ttf-linux-libertine
+
+- name: install shell packages
+  pacman:
+    name:
       # Shell
       - zsh
       - zsh-completions
@@ -43,6 +47,10 @@
       - asciinema          # term recorder
       - expect             # automation tool
       - arch-audit         # list vulnerabilities
+      
+  - name: install system packages
+  pacman:
+    name:
       # System
       - htop               # system monitor
       - net-tools          # netstat
