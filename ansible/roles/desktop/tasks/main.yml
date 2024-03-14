@@ -138,7 +138,7 @@
       - remmina-plugin-rdesktop
       - wacom-settings-git
       - wacom-utility
-      - connman-gtk # connman gtk gui
+      # - connman-gtk # connman gtk gui
       - adb-sync-git # android dir sync
       - downgrade # package downgrader
       - lf # cli file manager
