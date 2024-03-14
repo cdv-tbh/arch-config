@@ -16,7 +16,17 @@
       - ttf-jetbrains-mono # main font
       - noto-fonts         # unicode font
       - noto-fonts-emoji   # emojis
+      - awesome-terminal-fonts
+      - terminus-font
+      - ttf-dejavu
+      - ttf-droid
+      - ttf-fira-code
+      - ttf-font-awesome
+      - ttf-ibm-plex
+      - ttf-linux-libertine
       # Shell
+      - zsh
+      - zsh-completions
       - fish               # powerful shell
       - starship           # cross-shell prompt
       - git                #
@@ -37,14 +47,17 @@
       - htop               # system monitor
       - net-tools          # netstat
       - reflector          # mirror sorter
-      - fwupd              # dell firmware updater
+      - fwupd              # firmware updater
       - nmap               # port scanner
       - tcpdump            # packet analyzer
       - whois              # query registry
       - stress             # stress test tool
+      - glances            # monitoring tool
       # Disk
       - iotop              # disk "top"
       - ncdu               # disk usage analyzer
+      - baobab             # graphical disk usage analyzer
+      - duf                # disk usage analyzer
       # Network
       - nethogs            # net "top"
       - openssh            #
@@ -54,6 +67,8 @@
       - bind-tools         # dns tools
       - openbsd-netcat     # network utility
       - speedtest-cli      #
+      - arp-scan           # arp scan utility
+      - iwd
       # Utils
       - cronie             # Scheduler
       - at                 # Scheduler
@@ -79,12 +94,20 @@
       - python-pre-commit  # pre-commit hook manager
       - zim                # wiki app
       - mailutils          # mail client
+      - gparted
+      - nfs-utils
+      - ntfs-3g
+      - opendoas
+      - ranger
+      - rkhunter
+      - sshfs
+      - stow
     state: present
 
-- name: Configure root
-  user:
-    name: root
-    shell: '{{shell}}'
+# - name: Configure root
+#   user:
+#     name: root
+#     shell: '{{shell}}'
 
 - name: Configure user
   user:

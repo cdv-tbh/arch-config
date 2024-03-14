@@ -3,8 +3,8 @@
   become: yes
 
   vars:
-    user: user
-    shell: /usr/bin/fish
+    user: cdv
+    shell: /usr/bin/zsh
     cmdline: ""
 
   pre_tasks:

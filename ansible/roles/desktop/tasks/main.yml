@@ -2,16 +2,33 @@
 - name: install desktop packages
   pacman:
     name:
+      - xorg
+      - xorg-init
+      - xterm 
+      - i3-wm
+      - i3blocks
+      - i3lock
+      - i3status
+      - polybar
+      - rofi
+      - autorandr
+      - arandr              # visual frontend for XRandR
+      - arc-gtk-theme
+      - lxappearance          # theme manager
+      - flameshot           # screenshots
+      - brightnessctl # brightness manager
+      - dmenu
+      - dunst
+      - nitrogen
       #- sway
       #- swaybg
       #- xorg-server-xwayland
       #- waybar
-      #- mako # notification daemon
-      #- kanshi # autorandr for wayland
-      #- grim # screenshots
+      #- mako               # notification daemon
+      #- kanshi             # autorandr for wayland
+      #- grim               # screenshots 
       #- slurp # region selector
       #- wl-clipboard # clipboard manager
-      - brightnessctl # brightness manager
       #- wofi # rofi for wayland
       #- swayidle
       #- xdg-user-dirs
@@ -27,7 +44,9 @@
       #- vulkan-intel
       #- lib32-vulkan-intel
       #- intel-media-driver
+      - vulkan-radeon
       - libva-utils
+      - xf86-video-amdgpu
     state: present
 
 - name: install audio packages
@@ -40,57 +59,91 @@
       - pavucontrol
       - pamixer
       - alsa-utils
+      - audacity
     state: present
 
 - name: install applications packages
   pacman:
     name:
-      - imv # img visualizer
-      #- wezterm # terminal emulator
-      - evince # pdf viewer
-      - evolution # mail client
-      - gnome-keyring # evolution gnome keyring
-      - seahorse # keyring manager
+      - imv                   # img visualizer
+      # - wezterm               # terminal emulator
+      - evince                # pdf viewer
+      # - evolution             # mail 
+      - thunderbird           # mail & rss client
+      - gnome-keyring         # evolution gnome keyring
+      - seahorse              # keyring manager
       - firefox
-      - firefox-i18n-fr
-      - flatpak # package manager
-      - gimp # img editor
-      - kolourpaint # img editor
-      - shotwell # photo manager
-      - libreoffice-still-en # libreoffice suite en
-      - lollypop # music player
-      - lxappearance # theme manager
-      - mpv # video player
-      - nemo # file manager
-      - pcmanfm # file manager
-      - tumbler # thumbnailer
-      - openvpn # vpn client
-      - openconnect # globalprotect vpn client
-      - playerctl # music player cli controller
-      - rdesktop # remote desktop client
-      - remmina # remote desktop client
-      - freerdp # remmina dep for rdp
+      - flatpak               # package manager
+      - gimp                  # img editor
+      - kolourpaint           # img editor
+      - shotwell              # photo manager
+      - libreoffice-fresh     # libreoffice suite
+      - barrier
+      - bleachbit
+      - blender
+      - blueman
+      - calc
+      - darktable
+      - discord
+      - filezilla
+      - gthumb
+      - gzip
+      - inkscape
+      - kate
+      - obs-studio
+      - rxvt-unicode
+      - spice
+      - spice-vdagent
+      - tailscale
+      - tmux
+      - veracrypt
+      - virtualbox
+      - virtualbox-guest-iso
+      - virtualbox-guest-utils
+      - virtualbox-host-dkms
+      - wget
+      - wireguard-tools
+      - xcape
+      - yubico-pam 2.27-2
+      - yubikey-personalization-gui
+      - yubioath-desktop
+      - wacomtablet
+      - xf86-input-wacom
+      # - lollypop              # music player
+      # - mpv                   # video player
+      - vlc                   # video player
+      # - nemo                  # file manager
+      - pcmanfm               # file manager
+      - tumbler               # thumbnailer
+      # - openvpn               # vpn client
+      # - openconnect           # globalprotect vpn client
+      # - playerctl             # music player cli controller
+      - rdesktop              # remote desktop client
+      - remmina               # remote desktop client
+      - freerdp               # remmina dep for rdp
       #- steam # games manager
-      - transmission-gtk # torrent downloader
-      - texlive-bin # latex
-      - texlive-core # latex
-      - texlive-latexextra # latex
-      - texlive-fontsextra # latex
-      - variety # random backgrounds
-      - papirus-icon-theme # icon theme
-      - gnome-themes-extra # gtk themes
+      - transmission-gtk      # torrent downloader
+
+      # - texlive-bin           # latex
+      # - texlive-core          # latex
+      # - texlive-latexextra    # latex
+      # - texlive-fontsextra    # latex
+      - variety               # random backgrounds
+      - papirus-icon-theme    # icon theme
+      - gnome-themes-extra    # gtk themes
       #- x2goclient
       - youtube-dl
-      - gopass # password manager
-      - okular # pdf editor, no image overlay
-      - xournalpp # pdf editor, no form
+      - gopass                # password manager
+      - keepassxc             # password manager
+      - okular                # pdf editor, no image overlay
+      - xournalpp             # pdf editor, no form
     state: present
 
 - name: add missing gpg keys for aur
   become: no
   shell: gpg --recv --keyserver keyserver.ubuntu.com '{{item}}'
   loop:
-    - F4B432D5D67990E3 # wob
+    # - F4B432D5D67990E3 # wob
 
   changed_when: false
 
@@ -99,43 +152,60 @@
   aur:
     skip_installed: true
     name:
-      - adapta-gtk-theme #https://github.com/Alexays/Waybar/issues/515
-      - equilux-theme
-      - wdisplays-git # arandr for wayland
-      - wf-recorder-git # screen recorder for wayland
-      - grimshot-git # grim+slurp wrapper
-      - waypipe # wayland ssh -X
-      - wob # bars for wayland
+      - brave-beta-bin        # web browser
+      - mqtt-explorer-appimage
+      - oh-my-zsh-git
+      - otb-unifont
+      - tabby-bin
+      - tabby-bin-debug
+      - zenmap
+      - camunda-modeler-bin
+      - drawio-desktop-bin
+      - pycharm-professional
+      - realvnc-vnc-viewer
+      - remmina-plugin-folder
+      - remmina-plugin-rdesktop
+      - wacom-settings-git
+      - wacom-utility
+
+
+      # - adapta-gtk-theme #https://github.com/Alexays/Waybar/issues/515
+      # - equilux-theme
+      # - wdisplays-git            # arandr for wayland
+      # - wf-recorder-git # screen recorder for wayland
+      # - grimshot-git # grim+slurp wrapper
+      # - waypipe # wayland ssh -X
+      # - wob # bars for wayland
       - connman-gtk # connman gtk gui
       #- gnome-ssh-askpass2 # ssh askpass gui
-      - google-chrome
+      # - google-chrome
       - adb-sync-git # android dir sync
       - downgrade # package downgrader
       - lf # cli file manager
-      - molotov # french tv wrapper
+      # - molotov # french tv wrapper
       - otf-font-awesome
       #- ttf-impallari-cabin-font # xelatex cv
       - pastel # color viewer
-      - starleaf-breeze
-      - swappy # screenshot editor
-      - senpai-irc # irc client for soju
+      
+      # - swappy # screenshot editor
+      # - senpai-irc # irc client for soju
       - rbenv # ruby env manager
       - iwgtk # gui for iwd
       #- phockup # picture sorting tool
 
-- name: test swaylock-fancy
-  stat:
-    path: /bin/swaylock-fancy
-  register: swaylock
+# - name: test swaylock-fancy
+#   stat:
+#     path: /bin/swaylock-fancy
+#   register: swaylock
 
-- name: clone swaylock-fancy
-  git:
-    repo: https://github.com/eoli3n/swaylock-fancy
-    dest: /tmp/swaylock-fancy
-  when: not swaylock.stat.exists
+# - name: clone swaylock-fancy
+#   git:
+#     repo: https://github.com/eoli3n/swaylock-fancy
+#     dest: /tmp/swaylock-fancy
+#   when: not swaylock.stat.exists
 
-- name: install swaylock-fancy
-  shell: make install
-  args:
-    chdir: /tmp/swaylock-fancy
-  when: not swaylock.stat.exists
+# - name: install swaylock-fancy
+#   shell: make install
+#   args:
+#     chdir: /tmp/swaylock-fancy
+#   when: not swaylock.stat.exists

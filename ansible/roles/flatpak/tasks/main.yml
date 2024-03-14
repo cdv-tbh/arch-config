@@ -26,6 +26,11 @@
     #- fi.skyjake.Lagrange # gemini browser
     - net.xmind.XMind # mind mapping
     #- com.microsoft.Teams
+    - org.signal.Signal
+    - org.slack.Slack
+    - org.axosoft.GitKraken
+    - com.github.jeromerobert.pdfarranger
+    - io.github.shiftey.Desktop
 
 - name: Install flatpak beta packages
   community.general.flatpak:
@@ -34,6 +39,7 @@
     remote: flathub-beta
   loop:
     - org.freecadweb.FreeCAD
+
 
 #- name: Override Teams perms
 #  shell: |
