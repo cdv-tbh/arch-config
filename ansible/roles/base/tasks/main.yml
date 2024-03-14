@@ -24,10 +24,6 @@
       - ttf-font-awesome
       - ttf-ibm-plex
       - ttf-linux-libertine
-
-- name: install shell packages
-  pacman:
-    name:
       # Shell
       - zsh
       - zsh-completions
@@ -41,16 +37,11 @@
       - bat                # colorized cat
       - neovim             # futur of vim
       - tree               #
-      #- vi                 #
       - man                #
       - screen             # terminal multiplexer
       - asciinema          # term recorder
       - expect             # automation tool
       - arch-audit         # list vulnerabilities
-
-- name: install system packages
-  pacman:
-    name:
       # System
       - htop               # system monitor
       - net-tools          # netstat

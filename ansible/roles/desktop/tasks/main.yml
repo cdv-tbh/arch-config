@@ -19,19 +19,6 @@
       - dmenu
       - dunst
       - nitrogen
-      #- sway
-      #- swaybg
-      #- xorg-server-xwayland
-      #- waybar
-      #- mako               # notification daemon
-      #- kanshi             # autorandr for wayland
-      #- grim               # screenshots 
-      #- slurp # region selector
-      #- wl-clipboard # clipboard manager
-      #- wofi # rofi for wayland
-      #- swayidle
-      #- xdg-user-dirs
-      #- xdg-desktop-portal-wlr
     state: present
 
 - name: install video packages
@@ -40,9 +27,6 @@
       - mesa
       - mesa-demos
       - lib32-virtualgl
-      #- vulkan-intel
-      #- lib32-vulkan-intel
-      #- intel-media-driver
       - vulkan-radeon
       - libva-utils
       - xf86-video-amdgpu
@@ -108,29 +92,17 @@
       - yubioath-desktop
       - wacomtablet
       - xf86-input-wacom
-      # - lollypop              # music player
-      # - mpv                   # video player
+      - mpv                   # video player
       - vlc                   # video player
-      # - nemo                  # file manager
       - pcmanfm               # file manager
       - tumbler               # thumbnailer
-      # - openvpn               # vpn client
-      # - openconnect           # globalprotect vpn client
-      # - playerctl             # music player cli controller
       - rdesktop              # remote desktop client
       - remmina               # remote desktop client
       - freerdp               # remmina dep for rdp
-      #- steam # games manager
       - transmission-gtk      # torrent downloader
-
-      # - texlive-bin           # latex
-      # - texlive-core          # latex
-      # - texlive-latexextra    # latex
-      # - texlive-fontsextra    # latex
       - variety               # random backgrounds
       - papirus-icon-theme    # icon theme
       - gnome-themes-extra    # gtk themes
-      #- x2goclient
       - yt-dlp                # youtube dowload utility
       - gopass                # password manager
       - keepassxc             # password manager
@@ -166,31 +138,14 @@
       - remmina-plugin-rdesktop
       - wacom-settings-git
       - wacom-utility
-
-
-      # - adapta-gtk-theme #https://github.com/Alexays/Waybar/issues/515
-      # - equilux-theme
-      # - wdisplays-git            # arandr for wayland
-      # - wf-recorder-git # screen recorder for wayland
-      # - grimshot-git # grim+slurp wrapper
-      # - waypipe # wayland ssh -X
-      # - wob # bars for wayland
       - connman-gtk # connman gtk gui
-      #- gnome-ssh-askpass2 # ssh askpass gui
-      # - google-chrome
       - adb-sync-git # android dir sync
       - downgrade # package downgrader
       - lf # cli file manager
-      # - molotov # french tv wrapper
       - otf-font-awesome
-      #- ttf-impallari-cabin-font # xelatex cv
       - pastel # color viewer
-      
-      # - swappy # screenshot editor
-      # - senpai-irc # irc client for soju
       - rbenv # ruby env manager
       - iwgtk # gui for iwd
-      #- phockup # picture sorting tool
 
 # - name: test swaylock-fancy
 #   stat:
