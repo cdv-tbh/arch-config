@@ -23,12 +23,12 @@
     state: install
     system_site_packages: yes
 
-- name: install ansible
-  community.general.pipx:
-    name: ansible
-    state: inject
-    inject_packages:
-      - pywinrm
-      - requests-credssp
-      - dnspython
-      - pyvmomi
+#- name: install ansible
+#  community.general.pipx:
+#    name: ansible
+#    state: inject
+#    inject_packages:
+      #- pywinrm
+      #- requests-credssp
+      #- dnspython
+      #- pyvmomi
