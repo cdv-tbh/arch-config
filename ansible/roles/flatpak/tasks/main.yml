@@ -18,16 +18,10 @@
     state: present
     remote: flathub
   loop:
-    #- com.spotify.Client
-    #- com.vscodium.codium
-    #- com.mojang.Minecraft
-    #- com.github.Anuken.Mindustry
-    #- us.zoom.Zoom
-    #- fi.skyjake.Lagrange # gemini browser
     - net.xmind.XMind # mind mapping
     #- com.microsoft.Teams
     - org.signal.Signal
-    - org.slack.Slack
+    - com.slack.Slack
     - org.axosoft.GitKraken
     - com.github.jeromerobert.pdfarranger
     - io.github.shiftey.Desktop
