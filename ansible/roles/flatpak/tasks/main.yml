@@ -22,7 +22,7 @@
     #- com.microsoft.Teams
     - org.signal.Signal
     - com.slack.Slack
-    - org.axosoft.GitKraken
+    - com.axosoft.GitKraken
     - com.github.jeromerobert.pdfarranger
     - io.github.shiftey.Desktop
     - com.jgraph.drawio.desktop
