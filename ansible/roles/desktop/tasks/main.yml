@@ -103,7 +103,7 @@
       - wget
       - wireguard-tools
       - xcape
-      - yubico-pam 2.27-2
+      - yubico-pam
       - yubikey-personalization-gui
       - yubioath-desktop
       - wacomtablet
