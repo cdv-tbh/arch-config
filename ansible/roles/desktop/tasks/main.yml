@@ -144,7 +144,6 @@
       - lf # cli file manager
       - otf-font-awesome
       - pastel # color viewer
-      - rbenv # ruby env manager
       - iwgtk # gui for iwd
 
 # - name: test swaylock-fancy
