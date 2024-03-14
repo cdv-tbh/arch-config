@@ -25,10 +25,10 @@
       - stern           # tail multiple pods on Kubernetes
       - kubespy         # observe Kubernetes resources in real time
 
-- name: install pip3 containers packages
-  pip:
-    name:
-      - podman-compose  # mutli-container podman apps
+# - name: install pip3 containers packages
+#   pip:
+#     name:
+#       - podman-compose  # mutli-container podman apps
 
 - name: copy subuid files for podman rootless
   template:
