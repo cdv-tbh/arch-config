@@ -2,20 +2,20 @@
 - name: install desktop packages
   pacman:
     name:
-      - sway
-      - swaybg
-      - xorg-server-xwayland
-      - waybar
-      - mako # notification daemon
-      - kanshi # autorandr for wayland
-      - grim # screenshots
-      - slurp # region selector
-      - wl-clipboard # clipboard manager
+      #- sway
+      #- swaybg
+      #- xorg-server-xwayland
+      #- waybar
+      #- mako # notification daemon
+      #- kanshi # autorandr for wayland
+      #- grim # screenshots
+      #- slurp # region selector
+      #- wl-clipboard # clipboard manager
       - brightnessctl # brightness manager
-      - wofi # rofi for wayland
-      - swayidle
-      - xdg-user-dirs
-      - xdg-desktop-portal-wlr
+      #- wofi # rofi for wayland
+      #- swayidle
+      #- xdg-user-dirs
+      #- xdg-desktop-portal-wlr
     state: present
 
 - name: install video packages
@@ -24,9 +24,9 @@
       - mesa
       - mesa-demos
       - lib32-virtualgl
-      - vulkan-intel
-      - lib32-vulkan-intel
-      - intel-media-driver
+      #- vulkan-intel
+      #- lib32-vulkan-intel
+      #- intel-media-driver
       - libva-utils
     state: present
 
@@ -46,7 +46,7 @@
   pacman:
     name:
       - imv # img visualizer
-      - wezterm # terminal emulator
+      #- wezterm # terminal emulator
       - evince # pdf viewer
       - evolution # mail client
       - gnome-keyring # evolution gnome keyring
@@ -57,11 +57,12 @@
       - gimp # img editor
       - kolourpaint # img editor
       - shotwell # photo manager
-      - libreoffice-still-fr # libreoffice suite fr
+      - libreoffice-still-en # libreoffice suite en
       - lollypop # music player
       - lxappearance # theme manager
       - mpv # video player
       - nemo # file manager
+      - pcmanfm # file manager
       - tumbler # thumbnailer
       - openvpn # vpn client
       - openconnect # globalprotect vpn client
@@ -69,7 +70,7 @@
       - rdesktop # remote desktop client
       - remmina # remote desktop client
       - freerdp # remmina dep for rdp
-      - steam # games manager
+      #- steam # games manager
       - transmission-gtk # torrent downloader
       - texlive-bin # latex
       - texlive-core # latex
