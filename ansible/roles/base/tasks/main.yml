@@ -41,7 +41,7 @@
       - bat                # colorized cat
       - neovim             # futur of vim
       - tree               #
-      - vi                 #
+      #- vi                 #
       - man                #
       - screen             # terminal multiplexer
       - asciinema          # term recorder
