@@ -133,18 +133,18 @@
       - zenmap
       - camunda-modeler-bin
       # - drawio-desktop-bin
-      - pycharm-professional
-      - realvnc-vnc-viewer
-      - remmina-plugin-folder
-      - remmina-plugin-rdesktop
-      - wacom-settings-git
-      - wacom-utility
-      - adb-sync-git # android dir sync
-      - downgrade # package downgrader
-      - lf # cli file manager
-      - otf-font-awesome
-      - pastel # color viewer
-      - iwgtk # gui for iwd
+      # - pycharm-professional
+      # - realvnc-vnc-viewer
+      # - remmina-plugin-folder
+      # - remmina-plugin-rdesktop
+      # - wacom-settings-git
+      # - wacom-utility
+      # - adb-sync-git # android dir sync
+      # - downgrade # package downgrader
+      # - lf # cli file manager
+      # - otf-font-awesome
+      # - pastel # color viewer
+      # - iwgtk # gui for iwd
 
 # - name: test swaylock-fancy
 #   stat:
