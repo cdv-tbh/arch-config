@@ -47,8 +47,8 @@
       - asciinema          # term recorder
       - expect             # automation tool
       - arch-audit         # list vulnerabilities
-      
-  - name: install system packages
+
+- name: install system packages
   pacman:
     name:
       # System
