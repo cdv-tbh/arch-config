@@ -31,6 +31,7 @@
     - org.axosoft.GitKraken
     - com.github.jeromerobert.pdfarranger
     - io.github.shiftey.Desktop
+    - com.jgraph.drawio.desktop
 
 - name: Install flatpak beta packages
   community.general.flatpak:
