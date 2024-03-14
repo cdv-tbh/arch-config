@@ -131,7 +131,7 @@
       - papirus-icon-theme    # icon theme
       - gnome-themes-extra    # gtk themes
       #- x2goclient
-      - youtube-dl
+      - yt-dlp                # youtube dowload utility
       - gopass                # password manager
       - keepassxc             # password manager
       - okular                # pdf editor, no image overlay
